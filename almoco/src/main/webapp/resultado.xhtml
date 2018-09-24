@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Resultadoo</title>
+</h:head>
+<h:body>
+	<h:form>
+		<p:panel id="basic" header="Veja o resultado"
+			style="margin-bottom:20px">
+			<p:dataTable var="rest" value="#{globalBean.restaurantes}">
+				<p:column headerText="Restaurante">
+					<h:outputText value="#{rest.nome}" />
+				</p:column>
+				<p:column headerText="Votos">
+					<h:outputText value="#{rest.votos}" />
+				</p:column>
+			</p:dataTable>
+		</p:panel>
+	</h:form>
+</h:body>
+</html>
